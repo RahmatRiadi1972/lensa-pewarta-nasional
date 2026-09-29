@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Olahraga - Lensa Pewarta Nasional</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+.topbar {
+    background: #111;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #ddd;
+    font-size: 16px;
+}
+
+nav {
+    background: #c40000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 13px 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #900000;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    border-left: 6px solid #c40000;
+    padding-left: 12px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.news-image {
+    height: 220px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-weight: bold;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.news-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #c40000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    background: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    Portal Media Online Nasional
+</div>
+
+<header>
+    <h1>LENSA PEWARTA NASIONAL</h1>
+    <p>Informasi, Fakta dan Perspektif</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="nasional.html">Nasional</a>
+    <a href="daerah.html">Daerah</a>
+    <a href="politik.html">Politik</a>
+    <a href="hukum.html">Hukum</a>
+    <a href="pemerintahan.html">Pemerintahan</a>
+    <a href="ekonomi.html">Ekonomi</a>
+    <a href="pendidikan.html">Pendidikan</a>
+    <a href="sosial.html">Sosial</a>
+    <a href="kesehatan.html">Kesehatan</a>
+    <a href="olahraga.html">Olahraga</a>
+</nav>
+
+<main class="container">
+
+    <div class="section-title">
+        <h2>Berita Olahraga</h2>
+    </div>
+
+    <p class="subtitle">
+        Informasi dan perkembangan olahraga nasional dan daerah,
+        kompetisi, prestasi atlet, serta berbagai kegiatan olahraga di Indonesia.
+    </p>
+
+    <div class="news-grid">
+
+        <article class="news-card">
+            <div class="news-image">
+                FOTO BERITA
+            </div>
+
+            <div class="news-content">
+                <h3>
+                    Perkembangan Olahraga dan Prestasi Atlet Indonesia
+                </h3>
+
+                <p>
+                    Lensa Pewarta Nasional menyajikan informasi mengenai
+                    perkembangan olahraga dan prestasi atlet secara
+                    informatif dan berimbang.
+                </p>
+
+                <a class="read-more" href="#">
+                    Baca Selengkapnya →
+                </a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-image">
+                FOTO BERITA
+            </div>
+
+            <div class="news-content">
+                <h3>
+                    Kompetisi dan Kegiatan Olahraga Daerah
+                </h3>
+
+                <p>
+                    Berbagai informasi mengenai kompetisi, kegiatan olahraga
+                    dan perkembangan atlet daerah akan dihimpun dalam
+                    kanal Olahraga.
+                </p>
+
+                <a class="read-more" href="#">
+                    Baca Selengkapnya →
+                </a>
+            </div>
+        </article>
+
+    </div>
+
+</main>
+
+<footer>
+    © 2026 Lensa Pewarta Nasional — Media Online Nasional
+</footer>
+
+</body>
+</html>
