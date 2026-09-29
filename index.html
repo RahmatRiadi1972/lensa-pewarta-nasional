@@ -3,24 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lensa Pewarta Nasional</title>
+
+    <title>Lensa Pewarta Nasional - Informasi, Fakta dan Perspektif</title>
+
+    <meta name="description" content="Lensa Pewarta Nasional menyajikan informasi, fakta dan perspektif dari berbagai wilayah Indonesia.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .topbar {
+            background: #111827;
+            color: white;
+            padding: 8px 5%;
+            font-size: 13px;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .brand h1 {
+            font-size: 30px;
+            color: #b91c1c;
+            letter-spacing: 1px;
+        }
+
+        .brand p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .date {
+            color: #666;
+            font-size: 13px;
+        }
+
+        nav {
+            background: #b91c1c;
+            color: white;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            padding: 13px 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: #991b1b;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        .headline {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 5px solid #b91c1c;
+        }
+
+        .headline small {
+            color: #b91c1c;
+            font-weight: bold;
+        }
+
+        .headline h2 {
+            font-size: 32px;
+            margin: 8px 0;
+        }
+
+        .headline p {
+            color: #666;
+        }
+
+        .section-title {
+            border-left: 5px solid #b91c1c;
+            padding-left: 12px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
+
+        .news-image {
+            height: 170px;
+            background: linear-gradient(135deg, #d1d5db, #9ca3af);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .news-body {
+            padding: 17px;
+        }
+
+        .category {
+            color: #b91c1c;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .news-body h3 {
+            margin: 7px 0;
+            font-size: 19px;
+        }
+
+        .news-body p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .sidebar-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .sidebar-box h3 {
+            border-bottom: 2px solid #b91c1c;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-box li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            margin-top: 40px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        footer p,
+        footer li {
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 7px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #374151;
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+
+            .header-inner {
+                display: block;
+            }
+
+            .date {
+                margin-top: 8px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand h1 {
+                font-size: 24px;
+            }
+
+            .headline h2 {
+                font-size: 25px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <h1>LENSA PEWARTA NASIONAL</h1>
+    <div class="topbar">
+        Portal Media Online Nasional
+    </div>
 
-    <p>Portal Media Online Nasional</p>
+    <header>
 
-    <hr>
+        <div class="header-inner">
 
-    <h2>Informasi, Fakta dan Perspektif</h2>
+            <div class="brand">
+                <h1>LENSA PEWARTA NASIONAL</h1>
+                <p>Informasi, Fakta dan Perspektif</p>
+            </div>
 
-    <p>
-        Selamat datang di Lensa Pewarta Nasional.
-        Media online yang menyajikan informasi,
-        fakta dan perspektif kepada masyarakat.
-    </p>
+            <div class="date">
+                Media Online Nasional
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav>
+
+        <div class="nav-inner">
+
+            <a href="#">Beranda</a>
+            <a href="#">Nasional</a>
+            <a href="#">Daerah</a>
+            <a href="#">Politik</a>
+            <a href="#">Hukum</a>
+            <a href="#">Pemerintahan</a>
+            <a href="#">Ekonomi</a>
+            <a href="#">Pendidikan</a>
+            <a href="#">Sosial</a>
+            <a href="#">Kesehatan</a>
+            <a href="#">Olahraga</a>
+
+        </div>
+
+    </nav>
+
+    <main class="container">
+
+        <section class="headline">
+
+            <small>BERITA UTAMA</small>
+
+            <h2>
+                Lensa Pewarta Nasional Hadir Menyajikan Informasi, Fakta dan Perspektif
+            </h2>
+
+            <p>
+                Menyajikan informasi aktual dari berbagai wilayah Indonesia
+                dengan mengedepankan fakta, keberimbangan dan kepentingan publik.
+            </p>
+
+        </section>
+
+        <div class="content">
+
+            <section>
+
+                <h2 class="section-title">
+                    Berita Terbaru
+                </h2>
+
+                <div class="news-grid">
+
+                    <article class="news-card">
+
+                        <div class="news-image">
+                            FOTO BERITA
+                        </div>
+
+                        <div class="news-body">
+
+                            <div class="category">
+                                Nasional
+                            </div>
+
+                            <h3>
+                                Informasi Nasional Terkini
+                            </h3>
+
+                            <p>
+                                Ruang pemberitaan nasional Lensa Pewarta Nasional.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="news-card">
+
+                        <div class="news-image">
+                            FOTO BERITA
+                        </div>
+
+                        <div class="news-body">
+
+                            <div class="category">
+                                Daerah
+                            </div>
+
+                            <h3>
+                                Kabar Daerah dari Berbagai Wilayah
+                            </h3>
+
+                            <p>
+                                Informasi dan perkembangan daerah di Indonesia.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="news-card">
+
+                        <div class="news-image">
+                            FOTO BERITA
+                        </div>
+
+                        <div class="news-body">
+
+                            <div class="category">
+                                Pemerintahan
+                            </div>
+
+                            <h3>
+                                Informasi Pemerintahan dan Pelayanan Publik
+                            </h3>
+
+                            <p>
+                                Berita mengenai pemerintahan dan kepentingan masyarakat.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="news-card">
+
+                        <div class="news-image">
+                            FOTO BERITA
+                        </div>
+
+                        <div class="news-body">
+
+                            <div class="category">
+                                Hukum
+                            </div>
+
+                            <h3>
+                                Peristiwa Hukum dan Penegakan Hukum
+                            </h3>
+
+                            <p>
+                                Menyajikan informasi hukum secara faktual dan berimbang.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <aside>
+
+                <div class="sidebar-box">
+
+                    <h3>Terpopuler</h3>
+
+                    <ul>
+
+                        <li>Berita Nasional</li>
+                        <li>Berita Daerah</li>
+                        <li>Informasi Pemerintahan</li>
+                        <li>Peristiwa Hukum</li>
+                        <li>Ekonomi dan Bisnis</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="sidebar-box">
+
+                    <h3>Kategori</h3>
+
+                    <ul>
+
+                        <li>Nasional</li>
+                        <li>Daerah</li>
+                        <li>Politik</li>
+                        <li>Hukum</li>
+                        <li>Pemerintahan</li>
+                        <li>Ekonomi</li>
+                        <li>Pendidikan</li>
+                        <li>Sosial</li>
+                        <li>Kesehatan</li>
+                        <li>Olahraga</li>
+
+                    </ul>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+
+                <h3>Lensa Pewarta Nasional</h3>
+
+                <p>
+                    Portal media online yang menyajikan informasi,
+                    fakta dan perspektif dari berbagai wilayah Indonesia.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Informasi</h3>
+
+                <ul>
+                    <li>Tentang Kami</li>
+                    <li>Redaksi</li>
+                    <li>Pedoman Media Siber</li>
+                    <li>Kode Etik</li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Kontak</h3>
+
+                <p>
+                    Lensa Pewarta Nasional
+                </p>
+
+                <p>
+                    Media Online Nasional
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Lensa Pewarta Nasional. Seluruh hak cipta dilindungi.
+        </div>
+
+    </footer>
 
 </body>
 </html>
